@@ -152,5 +152,16 @@ table {
     font-style: normal;
 }
 body {
-  font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif; 
+  font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* ******************************************
+	Media Queries for screen wider than 720px
+****************************************** */
+@media screen and (min-width: 720px){
+	#portfolio article,
+	#resume article {
+		float:left;
+		width:33%;
+	}
 }
