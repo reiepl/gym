@@ -142,26 +142,161 @@ table {
 	Web Fonts
 ****************************************** */
 @font-face {
-    font-family: 'Roboto Condensed Light';
-    src: url('../fonts/robotocondensed-light-webfont.eot');
-    src: url('../fonts/robotocondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/robotocondensed-light-webfont.woff') format('woff'),
-         url('../fonts/robotocondensed-light-webfont.ttf') format('truetype'),
-         url('../fonts/robotocondensed-light-webfont.svg#RobotoCondensedLight') format('svg');
-    font-weight: normal;
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-Light-webfont.eot');
+    src: url('../fonts/WorkSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/WorkSans-Light-webfont.woff') format('woff'),
+         url('../fonts/WorkSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/WorkSans-Light-webfont.svg#WorkSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-Regular-webfont.eot');
+    src: url('../fonts/WorkSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/WorkSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/WorkSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/WorkSans-Regular-webfont.svg#WorkSans-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-Medium-webfont.eot');
+    src: url('../fonts/WorkSans-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/WorkSans-Medium-webfont.woff') format('woff'),
+         url('../fonts/WorkSans-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/WorkSans-Medium-webfont.svg#WorkSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-SemiBold-webfont.eot');
+    src: url('../fonts/WorkSans-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/WorkSans-SemiBold-webfont.woff') format('woff'),
+         url('../fonts/WorkSans-SemiBold-webfont.ttf') format('truetype'),
+         url('../fonts/WorkSans-SemiBold-webfont.svg#WorkSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-ExtraBold-webfont.eot');
+    src: url('../fonts/WorkSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/WorkSans-ExtraBold-webfont.woff') format('woff'),
+         url('../fonts/WorkSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('../fonts/WorkSans-ExtraBold-webfont.svg#WorkSans-ExtraBold') format('svg');
+    font-weight: 800;
     font-style: normal;
 }
 body {
-  font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
+/* ******************************************
+	Custom Styles
+****************************************** */
+
+#nav,#masthead,#content,#colophon {
+	margin: 0 18px;
+}
+
+#masthead {
+	color:#fff;
+}
+#container-nav {
+	background:#fff;
+}
+
+#container-header {
+	background:#352a38;
+	height: 350px;
+	width:100%;
+}
+
+#container-content {
+	padding: 24px 0;
+}
+
+#container-footer {
+	padding: 32px 0;
+	background:#352a38;
+	color:#eee;
+	font-weight:100;
+}
+.box {
+	padding:14px;
+}
+
+img {
+	max-width:100%;
+}
+
+/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+.group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    clear: both;
+}
+
+.group {
+    *zoom: 1; /* 3 */
+    }
 
 /* ******************************************
 	Media Queries for screen wider than 720px
 ****************************************** */
-@media screen and (min-width: 720px){
-	#portfolio article,
-	#resume article {
-		float:left;
-		width:33%;
-	}
+@media screen and (min-width: 45em){
+  body { font-size: 111.1111111%; }
+
+  #portfolio article,
+  #resume article {
+    float:left;
+    width:33%;
+  }
+}
+
+
+/* ******************************************
+	Print Styles
+****************************************** */
+@media print and (max-width: 8.5in){
+  #masthead {
+    color:black;
+  }
+  #container-header {
+    height: auto;
+  }
+  #portfolio	{
+    float:left;
+    width:45%;
+  }
+  #resume	{
+    float:right;
+    width:45%;
+  }
+  #container-footer	{
+    clear:both;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  img {
+    width:2in;
+    max-width:100% !important;
+    page-break-inside: avoid;
+  }
+  article a {
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  article a[href^=http]:after {
+    content:" <" attr(href) "> ";
+  }
+  article a[href^="#"]:after {
+    content: "";
+  }
+  @page { margin: 0.5cm; }
 }
