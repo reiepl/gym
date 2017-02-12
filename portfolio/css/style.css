@@ -197,9 +197,60 @@ body {
 /* ******************************************
 	Custom Styles
 ****************************************** */
+/*	  For details on font-size:100% see here: 			http://filamentgroup.com/lab/how_we_learned_to_leave_body_font_size_alone/
+
+For details on line-height:1 see here:	  			http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/
+
+For details on text-size-adjust:100% see here:
+https://developer.mozilla.org/en-US/docs/CSS/text-size-adjust
+*/
+html {
+  font-size: 100%;
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/* typographic scale = (font size * line height) = 1.125 x 1.375 = 1.5468 =1.5 */
+
+h1,h2,h3,h4,h5,h6 { font-weight: 400; }
+h1 { font-size: 3.375em; line-height: 1.333; }
+h2 { font-size: 2.25em; line-height: 1.333; }
+h1, h2 { text-shadow: 0 2px 2px rgba(0, 0, 0, .65); }
+h3 { font-size: 1.6875em; line-height: 1.25; }
+h4 {font-size: 1.265em; line-height:1.185; text-transform: uppercase;}
+h5,h6 { font-size: .84375em; line-height: 1.333; font-weight: 600; }
+h6 { color: #aaa; font-weight:500; }
+
+#portfolio h4 { line-height: 1.778; }
+.box ul {
+  list-style: none;
+  padding: 0;
+}
+#nav h3 { text-transform: capitalize;}
+#content article {
+  padding-top:.75em;
+  padding-bottom:1.5em;
+}
+.box h4 {
+  color: #999;
+  border-top: 4px double #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.125em; /* 3/4 of 1.5 */
+  text-align: center;
+}
+figure,
+.box {
+  background: #fff;
+  -moz-box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
+  -webkit-box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
+  box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
+  padding: 1.125em; /* 3/4 of 1.5 */
+}
+section footer { clear: both; }
 
 #nav,#masthead,#content,#colophon {
-	margin: 0 18px;
+	margin: 0 3.3%;
 }
 
 #masthead {
@@ -253,7 +304,14 @@ img {
   #portfolio article,
   #resume article {
     float:left;
-    width:33%;
+    width:33.333%;
+  }
+  #masthead { max-width:40em; }
+  #nav,
+  #masthead,
+  #content,
+  #colophon {
+      margin: 0 5.5%;
   }
 }
 

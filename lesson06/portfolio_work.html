@@ -26,12 +26,20 @@
 		line-height: 1.223; /* 1.3 / 1.063 = 1.223 */
 		margin: .612em 0;
 	}
+  .wrapper {
+      padding: 0 .65em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  #masthead { width:80%; }
+
 	</style>
 	</head>
 
 	<body lang="en">
 		<div id="container-nav">
-			<section id="nav">
+			<section id="nav" class="wrapper">
 				<h3>Maya Chopra</h3>
 				<!-- Turn off for now
 				<nav>
@@ -46,7 +54,7 @@
 			</section>
 		</div>
 		<div id="container-header">
-			<header id="masthead">
+			<header id="masthead" class="wrapper">
 				<h1>Hi, I'm Maya</h1>
 
 				<h2>A Boston-based designer/developer hybrid with a passion for user experience and the web</h2>
@@ -57,25 +65,25 @@
 
 				<section id="portfolio" class="group">
 
-					<header>
+					<header class="wrapper">
 						<h3>My Portfolio</h3>
 						<p>Some of the things I've been working on lately</p>
 					</header>
-					<article class="group">
-				<h4>Vitamin T Homepage</h4>
+					<article class="group wrapper">
+				        <h4>Vitamin T Homepage</h4>
 
 						<figure>
 							<img src="./img/vitamin-t.png">
 						</figure>
 				</article>
-				<article class="group">
+				<article class="group wrapper">
 				<h4>RoboHead iPad App</h4>
 
 							<figure>
 								<img src="./img/robohead.png">
 							</figure>
 				</article>
-				<article class="group">
+				<article class="group wrapper">
 				<h4>Shareist Homepage</h4>
 
 							<figure>
@@ -87,11 +95,11 @@
 
 				<section id="resume" class="group">
 
-						<header>
+						<header class="wrapper">
 							<h3>My Resume</h3>
 							<p>Current/previous positions and skill set</p>
 						</header>
-					<article>
+					<article class="wrapper">
 					<div class="box">
 						<h4>Currently</h4>
 
@@ -102,7 +110,7 @@
 						<p>Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith.</p>
 					</div>
 					</article>
-					<article>
+					<article class="wrapper">
 					<div class="box">
 						<h4>Previously</h4>
 
@@ -113,7 +121,7 @@
 						<p>Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.</p>
 					</div>
 					</article>
-					<article>
+					<article class="wrapper">
 					<div class="box">
 						<h4>Skills</h4>
 
@@ -125,7 +133,7 @@
 						</ul>
 					</div>
 					</article>
-						<footer>
+						<footer class="wrapper">
 							<p>For a full work history, have a look at my LinkedIn Profile</p>
 						</footer>
 
@@ -134,7 +142,7 @@
 			</article>
 		</div>
 		<div id="container-footer">
-			<footer id="colophon">
+			<footer id="colophon" class="wrapper">
 				<p>©2013 all rights reserved. Fill out a form here to get in touch.</p>
 			</footer>
 		</div>
