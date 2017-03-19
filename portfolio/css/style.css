@@ -1,7 +1,5 @@
-/********************************************
-	Tag Resets
+/****** Tag Resets
 ********************************************/
-
 body,
 div,
 h1,
@@ -39,8 +37,7 @@ section {
 	border: 0;
 }
 
-/********************************************
-	Normalize CSS
+/******* Normalize CSS
 	http://necolas.github.com/normalize.css/
 ********************************************/
 
@@ -93,8 +90,7 @@ pre {
 	word-wrap: break-word;
 }
 
-b,
-strong {
+b,strong {
 	font-weight: bold;
 }
 
@@ -191,9 +187,7 @@ table {
     font-weight: 800;
     font-style: normal;
 }
-body {
-  font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
-}
+
 /* ******************************************
 	Custom Styles
 ****************************************** */
@@ -211,77 +205,205 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-/* typographic scale = (font size * line height) = 1.125 x 1.375 = 1.5468 =1.5 */
+body {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+p, #resume li {
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.244;
+  /*  1. 20px / 16px = 1.25
+      2. Font Size * Line Height = 1.125em * 1.25 = 1.40 (Round up 1.4) = Typographic Scale
+      3. Typographic Scale / Font Size = 1.4 / 1.125 = 1.24 = New Line Height
+  */
+  margin: .612em 0;
+}
 
 h1,h2,h3,h4,h5,h6 { font-weight: 400; }
-h1 { font-size: 3.375em; line-height: 1.333; }
-h2 { font-size: 2.25em; line-height: 1.333; }
+h1 {
+  font-size: 3.375em; /* 1.125em * 3 = 3.375 */
+  line-height: 1.244;
+}
+h2 {
+  font-size: 2.25em;  /* 1.125em * 2 = 2.25 */
+  line-height: 1.244;
+}
 h1, h2 { text-shadow: 0 2px 2px rgba(0, 0, 0, .65); }
-h3 { font-size: 1.6875em; line-height: 1.25; }
-h4 {font-size: 1.265em; line-height:1.185; text-transform: uppercase;}
-h5,h6 { font-size: .84375em; line-height: 1.333; font-weight: 600; }
+h3 {
+  font-size: 1.575em;   /* 1.125em * 1.4 = 1.575 */
+  line-height: 1.111;   /* (1.4 + .35) / 1.575 = 1.111 */
+}
+h4 {
+  font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
+  line-height:1.185;    /* 1.4 / 1.181 = 1.185 */
+  text-transform: uppercase;
+}
+h5, h6 {
+  font-size: .7875em;   /* 1.125em * .7 = 0.7875 */
+  line-height: 1.333;   /* 1.05 / .7875 = 1.333 */
+  font-weight: 600;
+}
 h6 { color: #aaa; font-weight:500; }
 
-#portfolio h4 { line-height: 1.778; }
-.box ul {
-  list-style: none;
-  padding: 0;
+/* Fluid Columns, Fixed Gutters */
+.wrapper {
+    padding: 0 .7em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+#portfolio h4 { line-height: 1.778; /* 1.4 / 1.181 = 1.778 */ }
 #nav h3 { text-transform: capitalize;}
 #content article {
-  padding-top:.75em;
-  padding-bottom:1.5em;
+  padding-top:.7em;
+  padding-bottom:1.4em;
 }
+.box { padding:.7em; }
 .box h4 {
   color: #999;
   border-top: 4px double #eee;
   border-bottom: 1px solid #eee;
-  margin-bottom: 1.125em; /* 3/4 of 1.5 */
+  margin-bottom: 1.05em;  /* 3/4 of 1.4 */
   text-align: center;
 }
-figure,
-.box {
+.box ul {
+  list-style: none;
+  padding: 0;
+}
+figure, .box {
   background: #fff;
   -moz-box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
   -webkit-box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
   box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
-  padding: 1.125em; /* 3/4 of 1.5 */
+  padding: .7em;  /* 3/4 of 1.4 */
 }
 section footer { clear: both; }
 
 #nav,#masthead,#content,#colophon {
 	margin: 0 3.3%;
 }
-
 #masthead {
-	color:#fff;
+	color:#fff; width:90%;
 }
 #container-nav {
 	background:#fff;
 }
+/* Navigation */
+#nav { /* Create faux section height using padding. */
+  padding: .7em 0;
+}
+#nav h3 { /* Float heading and capitalize content. */
+  float: left;
+  text-transform: capitalize;
+}
+#nav ul {
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    margin: .7em 0 .35em;
+}
+#nav li {
+  border-top: 1px solid #eee;
+}
+#nav a {
+   display: block;
+   font-size: 1.125em;
+   color: #333;
+   text-decoration: none;
+   padding: 1.05em 1.4em;
+}
+#nav a:hover {
+   background: #f8f8f8;
+}
+/*  Hide <nav> off-screen
+http://37signals.com/svn/posts/3126-another-9999px ]
+*/
+#nav nav {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+}
+/* *****  Advanced Checkbox Hack
+          http://timpietrusky.com/advanced-checkbox-hack
+****************************************** */
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+    from {padding: 0;}
+    to {padding: 0;}
+}
+#nav input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+#nav label {
+    display: block;
+    background: url("../img/icon-menu.png") no-repeat right center;
+    text-indent: -999em;
+    cursor: pointer;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+#nav input[type=checkbox]:checked ~ nav {
+  height: auto;
+  max-height:400px;
+  overflow: hidden;
+}
 
 #container-header {
 	background:#352a38;
-	height: 350px;
 	width:100%;
 }
-
 #container-content {
-	padding: 24px 0;
+	padding: 1.4em 0;
 }
 
 #container-footer {
-	padding: 32px 0;
+	padding: 1.75em 0;
 	background:#352a38;
 	color:#eee;
 	font-weight:100;
 }
-.box {
-	padding:14px;
+
+/********************************************
+Fluid Media
+********************************************/
+figure {
+    position: relative;
+}
+figure img,
+figure object,
+figure embed,
+figure video {
+    display: block;
+    max-width: 100%;
+}
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    max-width:100%;
 }
 
-img {
-	max-width:100%;
+/* interpolation-mode
+http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
+*/
+
+/* Creates hover effect on Portfolio images */
+#portfolio figure:hover,
+.box:hover {
+    -moz-box-shadow: 0 0 .7em .35em rgba( 0, 0, 0, .1 );
+    -webkit-box-shadow: 0 0 .7em .35em rgba( 0, 0, 0, .1 );
+    box-shadow: 0 0 .7em .35em rgba( 0, 0, 0, .1 );
+}
+
+/* Image Offset for Indication of Linked Content */
+#portfolio figure:hover {
+    bottom: .26em;
 }
 
 /* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
@@ -290,31 +412,183 @@ img {
     display: table; /* 2 */
     clear: both;
 }
-
 .group {
-    *zoom: 1; /* 3 */
+  *zoom: 1; /* 3 */
+}
+
+/* ******************************************
+	   Form Styles Basic Layout
+****************************************** */
+form {
+  padding: 0 0 1.4em;
+}
+form ul {
+  list-style: none;
+  padding: 1.4em 0 0;
+}
+form li {
+  padding: 0 0 .7em;
+}
+legend {
+  font-size: 1.575em;
+  line-height:1.185;
+}
+
+label {
+  display: block;
+  font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
+  line-height:1.482;    /* 1.75 / 1.181 = 1.482 */
+  padding: 0 0 .35em;
+}
+legend, label {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
+    line-height:1.482;    /* 1.75 / 1.181 = 1.482 */
+    font-weight: 500;
+    padding: .35em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    padding-bottom: 10%;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    }
+
+.send {
+    display: inline-block;
+    max-width: 30em;
+    font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
+    line-height:1.185;    /* 1.4 / 1.181 = 1.185 */
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background: #0074b0;
+    margin: .7em .35em;
+    padding: .7em;
+    border: 0;
+    border-radius: 1.4em;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
+    }
+.send:hover {
+  background: #6f6f6f;
+}
+.send:active, .send:focus {
+    background: #555;
+}
+
 
 /* ******************************************
 	Media Queries for screen wider than 720px
 ****************************************** */
 @media screen and (min-width: 45em){
   body { font-size: 111.1111111%; }
+  #masthead { max-width:40em; }
+  #container-header {
+    background-image: url('../img/sky_l-1280.jpg');
+    background-size: cover;
+    padding:8% 0;
+  }
+  #nav, #masthead, #content, #colophon {
+    margin: 0 5.5%;
+  }
+  /*** NAVIGATION */
+  #nav {
+    padding: 0;
+  }
+  #nav h3 {
+    margin: .39em 1.3em 0 0;
+  }
+  #nav label {
+    display: none;
+  }
+  #nav nav {
+    height: auto;
+    max-height:none;
+    overflow: visible;
+  }
+  #nav ul {
+    border: 0;
+    margin: 0;
+  }
+  #nav li {
+    display: inline;
+    border: 0;
+  }
+  #nav a {
+    display: inline-block;
+  }
 
-  #portfolio article,
-  #resume article {
+  #portfolio article, #resume article {
     float:left;
     width:33.333%;
   }
-  #masthead { max-width:40em; }
-  #nav,
-  #masthead,
-  #content,
-  #colophon {
-      margin: 0 5.5%;
+
+  .name, .email {
+      float: left;
+      width: 50%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      }
+  .name {
+    padding-right: .7em;
+  }
+  .email {
+    padding-left: .7em;
+  }
+  .send {
+    width: 48.6%;
   }
 }
 
+/* ******************************************
+	Media Queries for screen wider than 960px
+****************************************** */
+@media (min-width: 60em) {
+  .name, .email {
+    padding-right: 1.4em;
+    padding-left: 0;
+    clear: both;
+  }
+  .message textarea {
+    width: 50%;
+    }
+  .send {
+    width: 25%;
+    margin-left: 50%;
+  }
+}
+
+@media screen and (min-width:30em) and (max-width: 45em) {
+  #container-header {
+    background-image: url('../img/sky_m-800.jpg');
+    padding:5% 0;
+  }
+}
+@media screen and (max-width: 30em) {
+  #container-header {
+    background-image: url('../img/sky_s-460.jpg');
+    padding:3% 0;
+  }
+  h1 { font-size: 2.756rem; /* 1.125em * 2.45 = 2.756 */  }
+  h2 { font-size: 1.969rem; /* 1.125em * 1.75 = 1.969 */  }
+}
 
 /* ******************************************
 	Print Styles

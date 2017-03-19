@@ -6,27 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="./css/style.css"/>
 
+
   <!-- Normalize hide address bar for iOS and Android -->
   <script src="./js/hideaddressbar.js"></script>
   <script src="./js/respond.min.js"></script>
+
+  <!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+  <script src="./js/picturefill.js"></script>
+  <script src="./js/matchmedia.js"></script>
   <!--[if lt IE 9]>
 	 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
   <style type="text/css" media="all">
-    p, #resume li {
-      font-size: 1.125em; /* 18px / 16px */
-      line-height: 1.333; /* typographic scale / font size */
-      margin: .612em 0;
-    }
-    /* Fluid Columns, Fixed Gutters */
-    .wrapper {
-        padding: 0 .75em;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    #masthead { width:80%; padding-top: 1.5em; }
 
   </style>
 	</head>
@@ -35,13 +27,17 @@
     <div id="container-nav">
       <section id="nav" class="wrapper">
   			<h3>Rei</h3>
+        <!-- Checkbox Hack markup -->
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" onclick>Menu</label>
+        <!-- /Checkbox Hack markup -->
         <nav>
   				<ul>
-  					<li>Portfolio</li>
-  					<li>Resume</li>
-  					<li>LinkedIn Profile</li>
-  					<li>Contact</li>
-  				</ul>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
+              <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
       </section>
     </div>
@@ -55,26 +51,51 @@
     <div id="container-content">
 			<article id="content">
         <section id="portfolio" class="group">
-          <header>
+          <header class="wrapper">
     				<h3>My Portfolio</h3>
             <p>Some of the things I've been working on lately</p>
           </header>
           <article class="group wrapper">
       			<h4>Health homepage</h4>
-            <figure>
-              <img src="./img/health.png">
+            <figure id="img-thumb-health">
+              <div data-picture data-alt="Health Homepage">
+                <div data-src="img/health-400x280.png"></div>
+                <div data-src="img/health-640x448.png" data-media="(min-width: 30em)"></div>
+                <div data-src="img/health-300x200.png" data-media="(min-width: 45em)"></div>
+                <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
+                <noscript>
+                  <img src="./img/health-400x280.png" alt="Health Homepage">
+                </noscript>
+              </div>
             </figure>
           </article>
           <article class="group wrapper">
       			<h4>Give Homepage</h4>
-            <figure>
-              <img src="./img/giving.png">
+
+            <figure id="img-thumb-giving">
+              <div data-picture data-alt="Giving Homepage">
+                <div data-src="img/giving-400x280.png"></div>
+                <div data-src="img/giving-640x448.png" data-media="(min-width: 30em)"></div>
+                <div data-src="img/giving-300x200.png" data-media="(min-width: 45em)"></div>
+                <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
+                <noscript>
+                  <img src="./img/giving-400x280.png" alt="Giving Homepage">
+                </noscript>
+              </div>
             </figure>
           </article>
           <article class="group wrapper">
       			<h4>My Makan Page</h4>
-            <figure>
-              <img src="./img/makan.png">
+            <figure id="img-thumb-makan">
+              <div data-picture data-alt="Makan Homepage">
+                <div data-src="img/makan-400x280.png"></div>
+                <div data-src="img/makan-640x448.png" data-media="(min-width: 30em)"></div>
+                <div data-src="img/makan-300x200.png" data-media="(min-width: 45em)"></div>
+                <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
+                <noscript>
+                  <img src="./img/makan-400x280.png" alt="Makan Homepage">
+                </noscript>
+              </div>
             </figure>
           </article>
         </section>
@@ -119,6 +140,26 @@
       </article>
     </div>
     <div id="container-footer" class="wrapper">
+      <form id="contact">
+          <fieldset class="wrapper">
+              <legend>Contact</legend>
+                  <ul class="group">
+                      <li class="name">
+                          <label for="name">Your Name</label>
+                          <input type="text" id="name" name="name" />
+                      </li>
+                      <li class="email">
+                          <label for="email">Your Email</label>
+                          <input type="email" id="email" name="email" />
+                      </li>
+                      <li class="message">
+                          <label for="message">Say Hello</label>
+                          <textarea id="message" name="message"></textarea>
+                      </li>
+                  </ul>
+              <input class="send" type="submit" name="submit" value="Send" />
+          </fieldset>
+      </form>
 			<footer id="colophon">
         <p>©2016 all rights reserved. </p>
       </footer>
