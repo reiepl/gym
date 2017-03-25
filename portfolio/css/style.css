@@ -505,7 +505,7 @@ textarea {
     padding:8% 0;
   }
   #nav, #masthead, #content, #colophon {
-    margin: 0 5.5%; max-width: 64em;
+    margin: 0 5.5%;
   }
   /*** NAVIGATION */
   #nav {
@@ -561,6 +561,9 @@ textarea {
 	Media Queries for screen wider than 960px
 ****************************************** */
 @media (min-width: 60em) {
+  #nav, #masthead, #content, #colophon {
+    margin: 0 auto; max-width: 64rem;
+  }
   .name, .email {
     padding-right: 1.4em;
     padding-left: 0;
