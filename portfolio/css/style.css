@@ -562,7 +562,7 @@ textarea {
 ****************************************** */
 @media (min-width: 60em) {
   #nav, #masthead, #content, #colophon {
-    margin: 0 auto; max-width: 64rem;
+    margin: 0 auto; max-width: 58rem;
   }
   .name, .email {
     padding-right: 1.4em;
