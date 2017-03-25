@@ -640,19 +640,27 @@ img {
 	@media screen and (min-width: 60em) {
 
 	.name, .email {
-	    padding-right: 1.3em;
-	    padding-left: 0;
-	    clear: both;
-	    }
-
+	  padding-right: 1.3em;
+	  padding-left: 0;
+	  clear: both;
+	}
 	.message textarea {
-	    width: 50%;
-	    }
-
+	  width: 50%;
+	}
 	.send {
-	    width: 25%;
-	    margin-left: 50%;
-	    }
+	  width: 25%;
+	  margin-left: 50%;
+	}
+
+  /* Form Fixes, IE7 and below */
+  .ie .message textarea {
+      *width: 49.9%;
+      }
+
+  .ie .send {
+      *margin-left: 46.7%;
+      }
+
 
 	}
 
