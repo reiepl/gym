@@ -1,193 +1,43 @@
-/****** Tag Resets
-********************************************/
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-th,
-td,
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-/******* Normalize CSS
-	http://necolas.github.com/normalize.css/
-********************************************/
-
-html {
-	height: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
-
-body {
-	min-height: 100%;
-	font-size: 100%;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-audio,
-canvas,
-video {
-	display: block;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-}
-
-b,strong {
-	font-weight: bold;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
-
-input,
-textarea,
-button,
-select {
-	margin: 0;
-	font-size: 100%;
-	line-height: normal;
-	vertical-align: baseline;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	cursor: pointer;
-	-webkit-appearance: button;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-textarea {
-	overflow: auto;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
+@import "normalize.css";
+@import "skeleton.css";
 /* ******************************************
 	Web Fonts
 ****************************************** */
 @font-face {
-    font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-Light-webfont.eot');
-    src: url('../fonts/WorkSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/WorkSans-Light-webfont.woff') format('woff'),
-         url('../fonts/WorkSans-Light-webfont.ttf') format('truetype'),
-         url('../fonts/WorkSans-Light-webfont.svg#WorkSans-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-Light-webfont.eot');
+  src: url('../fonts/WorkSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/WorkSans-Light-webfont.woff') format('woff'), url('../fonts/WorkSans-Light-webfont.ttf') format('truetype'), url('../fonts/WorkSans-Light-webfont.svg#WorkSans-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-Regular-webfont.eot');
-    src: url('../fonts/WorkSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/WorkSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/WorkSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/WorkSans-Regular-webfont.svg#WorkSans-Regular') format('svg');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-Regular-webfont.eot');
+  src: url('../fonts/WorkSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/WorkSans-Regular-webfont.woff') format('woff'), url('../fonts/WorkSans-Regular-webfont.ttf') format('truetype'), url('../fonts/WorkSans-Regular-webfont.svg#WorkSans-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-Medium-webfont.eot');
-    src: url('../fonts/WorkSans-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/WorkSans-Medium-webfont.woff') format('woff'),
-         url('../fonts/WorkSans-Medium-webfont.ttf') format('truetype'),
-         url('../fonts/WorkSans-Medium-webfont.svg#WorkSans-Medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-Medium-webfont.eot');
+  src: url('../fonts/WorkSans-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/WorkSans-Medium-webfont.woff') format('woff'), url('../fonts/WorkSans-Medium-webfont.ttf') format('truetype'), url('../fonts/WorkSans-Medium-webfont.svg#WorkSans-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-SemiBold-webfont.eot');
-    src: url('../fonts/WorkSans-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/WorkSans-SemiBold-webfont.woff') format('woff'),
-         url('../fonts/WorkSans-SemiBold-webfont.ttf') format('truetype'),
-         url('../fonts/WorkSans-SemiBold-webfont.svg#WorkSans-SemiBold') format('svg');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-SemiBold-webfont.eot');
+  src: url('../fonts/WorkSans-SemiBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/WorkSans-SemiBold-webfont.woff') format('woff'), url('../fonts/WorkSans-SemiBold-webfont.ttf') format('truetype'), url('../fonts/WorkSans-SemiBold-webfont.svg#WorkSans-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-ExtraBold-webfont.eot');
-    src: url('../fonts/WorkSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/WorkSans-ExtraBold-webfont.woff') format('woff'),
-         url('../fonts/WorkSans-ExtraBold-webfont.ttf') format('truetype'),
-         url('../fonts/WorkSans-ExtraBold-webfont.svg#WorkSans-ExtraBold') format('svg');
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-ExtraBold-webfont.eot');
+  src: url('../fonts/WorkSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/WorkSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/WorkSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/WorkSans-ExtraBold-webfont.svg#WorkSans-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
 }
-
 /* ******************************************
 	Custom Styles
 ****************************************** */
@@ -208,8 +58,10 @@ html {
 body {
   font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
-p, #resume li {
-  font-size: 1.125em; /* 18px / 16px = 1.125em */
+p,
+#resume li {
+  font-size: 1.125em;
+  /* 18px / 16px = 1.125em */
   line-height: 1.244;
   /*  1. 20px / 16px = 1.25
       2. Font Size * Line Height = 1.125em * 1.25 = 1.40 (Round up 1.4) = Typographic Scale
@@ -217,102 +69,125 @@ p, #resume li {
   */
   margin: .612em 0;
 }
-
-h1,h2,h3,h4,h5,h6 { font-weight: 400; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+}
 h1 {
-  font-size: 3.375em; /* 1.125em * 3 = 3.375 */
+  font-size: 3.375em;
+  /* 1.125em * 3 = 3.375 */
   line-height: 1.244;
 }
 h2 {
-  font-size: 2.25em;  /* 1.125em * 2 = 2.25 */
+  font-size: 2.25em;
+  /* 1.125em * 2 = 2.25 */
   line-height: 1.244;
 }
-h1, h2 { text-shadow: 0 2px 2px rgba(0, 0, 0, .65); }
+h1,
+h2 {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.65);
+}
 h3 {
-  font-size: 1.575em;   /* 1.125em * 1.4 = 1.575 */
-  line-height: 1.111;   /* (1.4 + .35) / 1.575 = 1.111 */
+  font-size: 1.575em;
+  /* 1.125em * 1.4 = 1.575 */
+  line-height: 1.111;
+  /* (1.4 + .35) / 1.575 = 1.111 */
 }
 h4 {
-  font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
-  line-height:1.185;    /* 1.4 / 1.181 = 1.185 */
+  font-size: 1.181em;
+  /* 1.125em * 1.05 = 1.181 */
+  line-height: 1.185;
+  /* 1.4 / 1.181 = 1.185 */
   text-transform: uppercase;
 }
-h5, h6 {
-  font-size: .7875em;   /* 1.125em * .7 = 0.7875 */
-  line-height: 1.333;   /* 1.05 / .7875 = 1.333 */
+h5,
+h6 {
+  font-size: .7875em;
+  /* 1.125em * .7 = 0.7875 */
+  line-height: 1.333;
+  /* 1.05 / .7875 = 1.333 */
   font-weight: 600;
 }
-h6 { color: #aaa; font-weight:500; }
-
+h6 {
+  color: #aaa;
+  font-weight: 500;
+}
 /* Fluid Columns, Fixed Gutters */
-.wrapper {
-    padding: 0 .7em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+#portfolio h4 {
+  line-height: 1.778;
+  /* 1.4 / 1.181 = 1.778 */
 }
-#portfolio h4 { line-height: 1.778; /* 1.4 / 1.181 = 1.778 */ }
-#nav h3 { text-transform: capitalize;}
 #content article {
-  padding-top:.7em;
-  padding-bottom:1.4em;
+  padding-top: .7em;
+  padding-bottom: 1.4em;
 }
-.box { padding:.7em; }
+.box {
+  padding: .7em;
+}
 .box h4 {
   color: #999;
   border-top: 4px double #eee;
   border-bottom: 1px solid #eee;
-  margin-bottom: 1.05em;  /* 3/4 of 1.4 */
+  margin-bottom: 1.05em;
+  /* 3/4 of 1.4 */
   text-align: center;
 }
 .box ul {
   list-style: none;
   padding: 0;
 }
-figure, .box {
+figure,
+.box {
   background: #fff;
-  -moz-box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
-  -webkit-box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
-  box-shadow: 0 0 .375em .1875em rgba( 0, 0, 0, .1 );
-  padding: .7em;  /* 3/4 of 1.4 */
+  -moz-box-shadow: 0 0 0.375em 0.1875em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0.375em 0.1875em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.375em 0.1875em rgba(0, 0, 0, 0.1);
+  padding: .7em;
+  /* 3/4 of 1.4 */
 }
-section footer { clear: both; }
-
-#nav,#masthead,#content,#colophon {
-	margin: 0 3.3%;
+section footer {
+  clear: both;
 }
 #masthead {
-	color:#fff; width:90%;
+  color: #fff;
+  width: 90%;
 }
 #container-nav {
-	background:#fff;
+  background: #fff;
 }
 /* Navigation */
-#nav { /* Create faux section height using padding. */
+#nav {
+  /* Create faux section height using padding. */
   padding: .7em 0;
 }
-#nav h3 { /* Float heading and capitalize content. */
+#nav h3 {
+  /* Float heading and capitalize content. */
   float: left;
   text-transform: capitalize;
 }
 #nav ul {
-    list-style: none;
-    padding: 0;
-    border-bottom: 1px solid #eee;
-    margin: .7em 0 .35em;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  margin: .7em 0 .35em;
 }
 #nav li {
   border-top: 1px solid #eee;
 }
 #nav a {
-   display: block;
-   font-size: 1.125em;
-   color: #333;
-   text-decoration: none;
-   padding: 1.05em 1.4em;
+  display: block;
+  font-size: 1.125em;
+  color: #333;
+  text-decoration: none;
+  padding: 1.05em 1.4em;
 }
 #nav a:hover {
-   background: #f8f8f8;
+  background: #f8f8f8;
 }
 /*  Hide <nav> off-screen
 http://37signals.com/svn/posts/3126-another-9999px ]
@@ -328,94 +203,96 @@ http://37signals.com/svn/posts/3126-another-9999px ]
           http://timpietrusky.com/advanced-checkbox-hack
 ****************************************** */
 body {
-    -webkit-animation: bugfix infinite 1s;
+  -webkit-animation: bugfix infinite 1s;
 }
 @-webkit-keyframes bugfix {
-    from {padding: 0;}
-    to {padding: 0;}
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
 }
 #nav input[type=checkbox] {
-    position: absolute;
-    top: -999em;
-    left: -999em;
+  position: absolute;
+  top: -999em;
+  left: -999em;
 }
 #nav label {
-    display: block;
-    background: url("../img/icon-menu.png") no-repeat right center;
-    text-indent: -999em;
-    cursor: pointer;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;
+  display: block;
+  background: url("../img/icon-menu.png") no-repeat right center;
+  text-indent: -999em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
 }
 #nav input[type=checkbox]:checked ~ nav {
   height: auto;
-  max-height:400px;
+  max-height: 400px;
   overflow: hidden;
 }
-
 #container-header {
-	background:#352a38;
-	width:100%;
+  background: #352a38;
+  width: 100%;
 }
 #container-content {
-	padding: 1.4em 0;
+  padding: 1.4em 0;
 }
-
 #container-footer {
-	padding: 1.75em 0;
-	background:#352a38;
-	color:#eee;
-	font-weight:100;
+  padding: 1.75em 0;
+  background: #352a38;
+  color: #eee;
+  font-weight: 100;
 }
-
 /********************************************
 Fluid Media
 ********************************************/
 figure {
-    position: relative;
+  position: relative;
 }
 figure img,
 figure object,
 figure embed,
 figure video {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 img {
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-    max-width:100%;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
 }
-
 /* interpolation-mode
 http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
 */
-
 /* Creates hover effect on Portfolio images */
 #portfolio figure:hover,
 .box:hover {
-    -moz-box-shadow: 0 0 .7em .35em rgba( 0, 0, 0, .1 );
-    -webkit-box-shadow: 0 0 .7em .35em rgba( 0, 0, 0, .1 );
-    box-shadow: 0 0 .7em .35em rgba( 0, 0, 0, .1 );
+  -moz-box-shadow: 0 0 0.7em 0.35em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0.7em 0.35em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.7em 0.35em rgba(0, 0, 0, 0.1);
 }
-
 /* Image Offset for Indication of Linked Content */
 #portfolio figure:hover {
-    bottom: .26em;
+  bottom: .26em;
 }
-
 /* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
 .group:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-    clear: both;
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+  clear: both;
 }
 .group {
-  *zoom: 1; /* 3 */
+  *zoom: 1;
+  /* 3 */
 }
-
 /* ******************************************
 	   Form Styles Basic Layout
 ****************************************** */
@@ -425,101 +302,107 @@ form {
 form ul {
   list-style: none;
   padding: 1.4em 0 0;
+  margin: 0;
 }
 form li {
-  padding: 0 0 .7em;
+  margin: 0 0 .7em;
 }
 legend {
   font-size: 1.575em;
-  line-height:1.185;
+  line-height: 1.185;
 }
-
 label {
   display: block;
-  font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
-  line-height:1.482;    /* 1.75 / 1.181 = 1.482 */
-  padding: 0 0 .35em;
+  font-size: 1.181em;
+  /* 1.125em * 1.05 = 1.181 */
+  line-height: 1.482;
+  /* 1.75 / 1.181 = 1.482 */
 }
-legend, label {
+legend,
+label {
   font-weight: 300;
   text-transform: uppercase;
   color: #fff;
 }
-
-input, textarea {
-    display: block;
-    width: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
-    line-height:1.482;    /* 1.75 / 1.181 = 1.482 */
-    font-weight: 500;
-    padding: .35em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.181em;
+  /* 1.125em * 1.05 = 1.181 */
+  line-height: 1.482;
+  /* 1.75 / 1.181 = 1.482 */
+  font-weight: 500;
+  padding: .35em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /**
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-
 textarea {
-    padding-bottom: 10%;
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
-    }
-
-.send {
-    display: inline-block;
-    max-width: 30em;
-    font-size: 1.181em;   /* 1.125em * 1.05 = 1.181 */
-    line-height:1.185;    /* 1.4 / 1.181 = 1.185 */
-    font-weight: 500;
-    color: #fff;
-    text-decoration: none;
-    background: #0074b0;
-    margin: .7em .35em;
-    padding: .7em;
-    border: 0;
-    border-radius: 1.4em;
-    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
-    }
-.send:hover {
+  min-height: 10rem;
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+input.send {
+  display: inline-block;
+  max-width: 30em;
+  font-size: 1.181em;
+  /* 1.125em * 1.05 = 1.181 */
+  line-height: 1.185;
+  /* 1.4 / 1.181 = 1.185 */
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background: #0074b0;
+  margin: .7em .35em;
+  padding: .7em;
+  border: 0;
+  border-radius: 1.4em;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.65);
+  height: auto;
+}
+input.send:hover {
   background: #6f6f6f;
 }
-.send:active, .send:focus {
-    background: #555;
+input.send:active,
+.send:focus {
+  background: #555;
 }
-
-
 /* ******************************************
 	Media Queries for screen wider than 720px
 ****************************************** */
-@media screen and (min-width: 45em){
-  body { font-size: 111.1111111%; }
-  #masthead { max-width:40em; }
+@media screen and (min-width: 45em) {
+  body {
+    font-size: 111.1111111%;
+  }
+  #masthead {
+    max-width: 40em;
+  }
   #container-header {
     background-image: url('../img/sky_l-1280.jpg');
     background-size: cover;
-    padding:8% 0;
-  }
-  #nav, #masthead, #content, #colophon {
-    margin: 0 5.5%;
+    padding: 8% 0;
   }
   /*** NAVIGATION */
   #nav {
     padding: 0;
   }
   #nav h3 {
-    margin: .39em 1.3em 0 0;
+    margin: .7em 1.3em 0 0;
   }
   #nav label {
     display: none;
   }
   #nav nav {
     height: auto;
-    max-height:none;
+    max-height: none;
     overflow: visible;
   }
   #nav ul {
@@ -533,94 +416,96 @@ textarea {
   #nav a {
     display: inline-block;
   }
-
-  #portfolio article, #resume article {
-    float:left;
-    width:33.333%;
+  .name,
+  .email {
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
-
-  .name, .email {
-      float: left;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      }
   .name {
     padding-right: .7em;
   }
   .email {
     padding-left: .7em;
   }
-  .send {
+  input.send {
     width: 48.6%;
   }
 }
-
 /* ******************************************
 	Media Queries for screen wider than 960px
 ****************************************** */
 @media (min-width: 60em) {
-  #nav, #masthead, #content, #colophon {
-    margin: 0 auto; max-width: 58rem;
-  }
-  .name, .email {
+  .name,
+  .email {
     padding-right: 1.4em;
     padding-left: 0;
     clear: both;
   }
   .message textarea {
     width: 50%;
-    }
-  .send {
+  }
+  input.send {
     width: 25%;
     margin-left: 50%;
   }
 }
-
-@media screen and (min-width:30em) and (max-width: 45em) {
+@media screen and (min-width: 30em) and (max-width: 45em) {
   #container-header {
     background-image: url('../img/sky_m-800.jpg');
-    padding:5% 0;
+    padding: 5% 0;
   }
 }
 @media screen and (max-width: 30em) {
   #container-header {
     background-image: url('../img/sky_s-460.jpg');
-    padding:3% 0;
+    padding: 3% 0;
   }
-  h1 { font-size: 2.756rem; /* 1.125em * 2.45 = 2.756 */  }
-  h2 { font-size: 1.969rem; /* 1.125em * 1.75 = 1.969 */  }
+  h1 {
+    font-size: 2.756rem;
+    /* 1.125em * 2.45 = 2.756 */
+  }
+  h2 {
+    font-size: 1.969rem;
+    /* 1.125em * 1.75 = 1.969 */
+  }
 }
-
 /* ******************************************
 	Print Styles
 ****************************************** */
-@media print and (max-width: 8.5in){
+@media print and (max-width: 8.5in) {
   #masthead {
-    color:black;
+    color: black;
   }
   #container-header {
     height: auto;
   }
-  #portfolio	{
-    float:left;
-    width:45%;
+  #portfolio {
+    float: left;
+    width: 45%;
   }
-  #resume	{
-    float:right;
-    width:45%;
+  #resume {
+    float: right;
+    width: 45%;
   }
-  #container-footer	{
-    clear:both;
+  #container-footer {
+    clear: both;
   }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
-  p, h2, h3 { orphans: 3; widows: 3; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
   img {
-    width:2in;
-    max-width:100% !important;
+    width: 2in;
+    max-width: 100% !important;
     page-break-inside: avoid;
   }
   article a {
@@ -628,10 +513,14 @@ textarea {
     text-decoration: none;
   }
   article a[href^=http]:after {
-    content:" <" attr(href) "> ";
+    content: " <" attr(href) "> ";
   }
   article a[href^="#"]:after {
     content: "";
   }
-  @page { margin: 0.5cm; }
+  @page {
+    margin: 0.5cm;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

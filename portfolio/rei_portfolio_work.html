@@ -21,9 +21,8 @@
 	</head>
 
 	<body lang="en">
-    TEST updates?
     <div id="container-nav">
-      <section id="nav" class="wrapper">
+      <section id="nav" class="wrapper container">
   			<h3>Rei</h3>
         <!-- Checkbox Hack markup -->
         <input type="checkbox" id="toggle" />
@@ -39,128 +38,136 @@
         </nav>
       </section>
     </div>
+
     <div id="container-header">
-      <header id="masthead" class="wrapper">
-  			<h1>Hi, I'm Rei</h1>
-  			<h2>A Singapore-based front-end developer with a passion for the web.</h2>
-      </header>
+      <div class="container">
+        <header id="masthead">
+    			<h1>Hi, I'm Rei</h1>
+    			<h2>A Singapore-based front-end developer with a passion for the web.</h2>
+        </header>
+      </div>
     </div>
 
     <div id="container-content">
-			<article id="content">
-        <section id="portfolio" class="group">
-          <header class="wrapper">
+			<article id="content" class="container">
+        <section id="portfolio">
+          <header>
     				<h3>My Portfolio</h3>
             <p>Some of the things I've been working on lately</p>
           </header>
-          <article class="group wrapper">
-      			<h4>Health homepage</h4>
-            <figure id="img-thumb-health">
-              <div data-picture data-alt="Health Homepage">
-                <div data-src="img/health-400x280.png"></div>
-                <div data-src="img/health-640x448.png" data-media="(min-width: 30em)"></div>
-                <div data-src="img/health-300x200.png" data-media="(min-width: 45em)"></div>
-                <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
-                <noscript>
-                  <img src="./img/health-400x280.png" alt="Health Homepage" width="400" height="280">
-                </noscript>
-              </div>
-            </figure>
-          </article>
-          <article class="group wrapper">
-      			<h4>Give Homepage</h4>
+          <div class="row">
+            <article class=" four columns">
+        			<h4>Health homepage</h4>
+              <figure id="img-thumb-health">
+                <div data-picture data-alt="Health Homepage">
+                  <div data-src="img/health-400x280.png"></div>
+                  <div data-src="img/health-640x448.png" data-media="(min-width: 30em)"></div>
+                  <div data-src="img/health-300x200.png" data-media="(min-width: 45em)"></div>
+                  <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
+                  <noscript>
+                    <img src="./img/health-400x280.png" alt="Health Homepage" width="400" height="280">
+                  </noscript>
+                </div>
+              </figure>
+            </article>
+            <article class=" four columns">
+        			<h4>Give Homepage</h4>
 
-            <figure id="img-thumb-giving">
-              <div data-picture data-alt="Giving Homepage">
-                <div data-src="img/giving-400x280.png"></div>
-                <div data-src="img/giving-640x448.png" data-media="(min-width: 30em)"></div>
-                <div data-src="img/giving-300x200.png" data-media="(min-width: 45em)"></div>
-                <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
-                <noscript>
-                  <img src="./img/giving-400x280.png" alt="Giving Homepage" width="400" height="280">
-                </noscript>
-              </div>
-            </figure>
-          </article>
-          <article class="group wrapper">
-      			<h4>My Makan Page</h4>
-            <figure id="img-thumb-makan">
-              <div data-picture data-alt="Makan Homepage">
-                <div data-src="img/makan-400x280.png"></div>
-                <div data-src="img/makan-640x448.png" data-media="(min-width: 30em)"></div>
-                <div data-src="img/makan-300x200.png" data-media="(min-width: 45em)"></div>
-                <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
-                <noscript>
-                  <img src="./img/makan-400x280.png" alt="Makan Homepage" width="400" height="280">
-                </noscript>
-              </div>
-            </figure>
-          </article>
+              <figure id="img-thumb-giving">
+                <div data-picture data-alt="Giving Homepage">
+                  <div data-src="img/giving-400x280.png"></div>
+                  <div data-src="img/giving-640x448.png" data-media="(min-width: 30em)"></div>
+                  <div data-src="img/giving-300x200.png" data-media="(min-width: 45em)"></div>
+                  <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
+                  <noscript>
+                    <img src="./img/giving-400x280.png" alt="Giving Homepage" width="400" height="280">
+                  </noscript>
+                </div>
+              </figure>
+            </article>
+            <article class=" four columns">
+        			<h4>My Makan Page</h4>
+              <figure id="img-thumb-makan">
+                <div data-picture data-alt="Makan Homepage">
+                  <div data-src="img/makan-400x280.png"></div>
+                  <div data-src="img/makan-640x448.png" data-media="(min-width: 30em)"></div>
+                  <div data-src="img/makan-300x200.png" data-media="(min-width: 45em)"></div>
+                  <!-- fallback content for non-JS browsers. Same img src as the initial, unqualified source element -->
+                  <noscript>
+                    <img src="./img/makan-400x280.png" alt="Makan Homepage" width="400" height="280">
+                  </noscript>
+                </div>
+              </figure>
+            </article>
+          </div>
         </section>
 
-        <section id="resume" class="group">
+        <section id="resume" class="row">
           <header class="wrapper">
     				<h3>My Resume</h3>
     				<p>Current/previous positions and skill set</p>
           </header>
-          <article class="wrapper">
-            <div class="box">
-              <h4>Currently</h4>
-              <h5>Frontend QA</h5>
-              <h6>Learning Institution</h6>
-              <p>QA UI design for a learning system to be used by 500,000 users. Target audience include students, teachers and content providers.</p>
-            </div>
-          </article>
+          <div class="row">
+            <article class="four columns">
+              <div class="box">
+                <h4>Currently</h4>
+                <h5>Frontend QA</h5>
+                <h6>Learning Institution</h6>
+                <p>QA UI design for a learning system to be used by 500,000 users. Target audience include students, teachers and content providers.</p>
+              </div>
+            </article>
+            <article class="four columns">
+              <div class="box">
+          			<h4>Previously</h4>
+                <h5>Snr. Frontend Developer</h5>
+                <h6>Giving.sg</h6>
+                <p>Lead frontend developer for NVPC's fund-raising portal, giving.sg. Worked with 6 developers and 2 front-end developers.</p>
+              </div>
+            </article>
+            <article class="four columns">
+              <div class="box">
+                <h4>Skills</h4>
+                <ul>
+                  <li>Photoshop, Fireworks, and Sketch</li>
+                  <li>HTML5 &amp; CSS3</li>
+                  <li>Responsive Web Design</li>
+                </ul>
+              </div>
+            </article>
+          </div>
 
-          <article class="wrapper">
-            <div class="box">
-        			<h4>Previously</h4>
-              <h5>Snr. Frontend Developer</h5>
-              <h6>Giving.sg</h6>
-              <p>Lead frontend developer for NVPC's fund-raising portal, giving.sg. Worked with 6 developers and 2 front-end developers.</p>
-            </div>
-          </article>
-
-          <article class="wrapper">
-            <div class="box">
-              <h4>Skills</h4>
-              <ul>
-                <li>Photoshop, Fireworks, and Sketch</li>
-                <li>HTML5 &amp; CSS3</li>
-                <li>Responsive Web Design</li>
-              </ul>
-            </div>
-          </article>
           <footer class="wrapper">
             <p>For a full work history, have a look at my LinkedIn Profile</p>
           </footer>
         </section>
       </article>
     </div>
-    <div id="container-footer" class="wrapper">
-      <form id="contact">
-          <fieldset class="wrapper">
+    <div id="container-footer" class="wrapper ">
+      <div class="container">
+        <form id="contact">
+            <fieldset class="wrapper">
               <legend>Contact</legend>
-                  <ul class="group">
-                      <li class="name">
-                          <label for="name">Your Name</label>
-                          <input type="text" id="name" name="name" />
-                      </li>
-                      <li class="email">
-                          <label for="email">Your Email</label>
-                          <input type="email" id="email" name="email" />
-                      </li>
-                      <li class="message">
-                          <label for="message">Say Hello</label>
-                          <textarea id="message" name="message"></textarea>
-                      </li>
-                  </ul>
-              <input class="send" type="submit" name="submit" value="Send" />
-          </fieldset>
-      </form>
-			<footer id="colophon">
-        <p>©2016 all rights reserved. </p>
-      </footer>
+                <ul class="group">
+                  <li class="name">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" />
+                  </li>
+                  <li class="email">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" />
+                  </li>
+                  <li class="message">
+                    <label for="message">Say Hello</label>
+                    <textarea id="message" name="message"></textarea>
+                  </li>
+                </ul>
+                <input class="send" type="submit" name="submit" value="Send" />
+            </fieldset>
+        </form>
+  			<footer id="colophon">
+          <p>©2016 all rights reserved. </p>
+        </footer>
+      </div>
     </div>
 	</body>
 </html>
